@@ -1,0 +1,32 @@
+.drum-pad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #f0f0f0;
+    font-size: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.drum-pad:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.drum-pad:active {
+    background-color: #d0d0d0;
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media(max-width:768px){
+    .drum-pad {
+        height: 80px;
+        font-size: 1.5rem;
+    }
+}

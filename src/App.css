@@ -1,0 +1,135 @@
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 100vh;
+}
+
+#drum-machine {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 30px;
+    padding: 30px;
+    width: 90%;
+    max-width: 1200px;
+    border: 5px solid orange;
+    background-color: rgb(243, 243, 243);
+    border-radius: 10px;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+}
+
+
+.bank, .power {
+    height: 40px;
+    width: 120px;
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bank:hover, .power:hover {
+    background-color: orange;
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.bank:active, .power:active {
+    background-color: #003f8a;
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.second-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+#display {
+    color: black;
+    font-weight: 500;
+    background-color:grey;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    width: 80%;
+    text-align: center;
+}
+
+.volume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  
+}
+
+.volume input[type="range"] {
+    width: 100%;
+    max-width: 300px;
+   
+}
+
+/* .volume-bar {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.volume-bar-progress {
+    height: 100%;
+    position: absolute;
+    background-color: orange;
+    border-radius: 5px;
+} */
+
+@media (max-width: 768px) {
+    .app {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .keys {
+        width: 100%;
+        max-width: none;
+    }
+
+    .second-part {
+        width: 100%;
+        max-width: none;
+    }
+
+    .bank, .power {
+        width: 100px;
+    }
+
+    
+}
